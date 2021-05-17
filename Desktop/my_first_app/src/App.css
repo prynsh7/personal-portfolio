@@ -1,18 +1,59 @@
-.app {
-  display: flex;
-  margin: 0 auto;
-  max-width: 1200px;
-  padding: 0 15px;
-  min-height: 100vh;
-  border-radius: 10px;
-  flex-direction: column;
-  background-color: #b14747;
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@300&display=swap');
+ 
+:root{
+  --primary-black: #000;
+  --primary-orange: #f9ab00;
+  --primary-dark: rgba(255, 255, 255, 0.5);
 }
 
-@media (min-width: 800px){
-  .app{
-    padding: 0 100px;
-    margin-top: 5vh;
-    min-height: 90vh;
-  }
+
+body{
+  font-family: "Roboto Condesed" sans-serif;
 }
+
+/************* NAVBAR ******************/
+
+.logo{
+  width: 16.25rem;
+}
+
+/********** MENU LINKS ***********/
+nav a.nav-link{
+  font-size:1.1rem ;
+  letter-spacing: 0.0375rem;
+  cursor: pointer;
+}
+.navbar-nav{
+  margin-left: auto;
+
+}
+ nav ul li{
+  text-transform: uppercase;
+ }
+
+ .navbar-nav > li > a{
+   margin-right: 0.75rem !important;
+   margin-left: 0.75rem !important;
+   color: var(--primary-black) !important;
+   border-top: 0.1875rem solid var(--primary-dark); 
+ }
+
+ .navbar-brand {
+   max-width: 17.25rem;
+   padding: 0 !important;
+   height: 6rem !important;
+
+ }
+
+ .navbar-nav > li > a.active, .navbar-nav > li > a.active:focus {
+  border-top: 0.1875rem solid var(--primary-black) ;
+ } 
+
+ .navbar-nav > li > a:hover{
+  border-top: 0.1875rem solid var(--primary-black) ;
+
+ }
+
+ .navbar {
+   color: #fff;
+ }
