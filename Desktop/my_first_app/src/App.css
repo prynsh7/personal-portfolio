@@ -4,6 +4,8 @@
   --primary-black: #000;
   --primary-orange: #f9ab00;
   --primary-dark: rgba(255, 255, 255, 0.5);
+  --primary-red: #ef4035;
+  --primary-hover-red: #f33501;
 }
 
 
@@ -12,6 +14,9 @@ body{
 }
 
 /************* NAVBAR ******************/
+nav{
+  z-index: 2;
+}
 
 .logo{
   width: 16.25rem;
@@ -45,6 +50,12 @@ nav a.nav-link{
 
  }
 
+ @media(max-width: 768px){
+   .navbar-brand{
+     width: 7rem;
+   }
+ }
+
  .navbar-nav > li > a.active, .navbar-nav > li > a.active:focus {
   border-top: 0.1875rem solid var(--primary-black) ;
  } 
@@ -54,6 +65,81 @@ nav a.nav-link{
 
  }
 
- .navbar {
-   color: #fff;
- }
+
+/****************** Header ************/
+
+.header-wraper{
+  position: relative;
+  background: url(background.jpg) no-repeat;
+  background-size: cover;
+  background-position: center;
+  height: 90vh;
+}
+
+.main-info{
+  display: flex;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  flex-direction: column;
+  justify-content: center ;
+  align-items: center;
+  text-align: center;
+  z-index: 1; 
+}
+
+.main-info h1{
+  color: var(--primary-black);
+  text-transform: uppercase;
+}
+
+
+/************* TYPED TEXT ***********/
+.typed-text{
+  font-size: 2rem;
+  color: var(--primary-black);
+}
+
+@media(max-width: 768px){
+  .main-info h1{
+    font-size: 1.7rem !important;
+  }
+  .typed-text {
+    font-size: 1.4rem !important;
+  }
+}
+
+/************* HEADER MAIN OFFER BUTTON *********/
+.btn-main-offer {
+  border: 1px solid var(--primary-red);
+  text-transform: uppercase;
+  border-radius: 0;
+  padding: 0.625rem 0.75rem 0.625rem 0.75rem;
+  color: var(--primary-black);
+  margin: 2rem;
+  text-decoration: none;
+}
+
+.btn-main-offer:hover{
+  text-decoration: none;
+  background-color: var(--primary-red);
+  color: var(--primary-black);
+  transition: .2s ease-in-out;
+}
+
+/**************PARTICLE JS *********/
+
+.tsparticles-canvas-el {
+  position: absolute;
+  height: 100vh;
+  width: 100vw;
+  z-index: 1;
+}
+
+@media(max-width: 768px){
+  .particles-canvas{
+    display: none;
+  }
+}
